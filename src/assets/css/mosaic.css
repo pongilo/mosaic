@@ -1,0 +1,43 @@
+.mosaic-options {
+  display: flex;
+  flex-flow: row wrap;
+}
+.mosaic-options-item {
+  margin: .5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.mosaic-options-item.active,
+.mosaic-options-item:hover {
+  background: whitesmoke;
+}
+.mosaic-options-item img {
+  display: block;
+}
+.mosaic-options-item span {
+  display: block;
+  text-align: center;
+  margin-top: .5rem;
+  font-size: .875rem;
+  line-height: 1rem;
+}
+
+.mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 4px;
+}
+.mosaic-item {
+  background-color: gainsboro;
+  background-size: cover;
+  background-position: center center;
+  margin: 4px;
+  height: 0;
+}
+@media (max-width: 768px) {
+  .mosaic {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
